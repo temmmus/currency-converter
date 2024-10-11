@@ -1,0 +1,32 @@
+import fetch from "node-fetch";
+
+export default async function handler(req, res) {
+  if (req.method === "OPTIONS") {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    res.status(200).end();
+    return;
+  }
+
+  res.setHeader("Access-Control-Allow-Origin", "*");
+
+  const { from, to, amount } = req.query;
+
+  const API_KEY = process.env.API_KEY;
+
+  const apiUrl = `https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}&access_key=${API_KEY}`;
+
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    if (!response.ok) {
+      res.status(response.status).json({ error: "Error fetching data from API" });
+    } else {
+      res.status(200).json(data);
+    }
+  } catch (error) {
+    res.status(500).json({ error: "Internal server error" });
+  }
+}
