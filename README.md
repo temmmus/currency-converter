@@ -10,6 +10,8 @@ This is a web application for real-time currency conversion using live exchange 
 
 ## Live Demo
 
+You can view the live demo of this project on GitHub Pages: [GitHub Pages Link](https://temmmus.github.io/currency-converter)
+
 ## Installation
 
 To run this project locally, follow these steps:
