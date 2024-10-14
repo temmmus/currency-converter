@@ -1,6 +1,6 @@
 # Currency converter app
 
-Currency Converter is a web application for real-time currency conversion using live exchange rates from Exchangerate.host. The application secures API requests via a proxy hosted on Vercel, ensuring safe handling of API keys.
+This is a web application for real-time currency conversion using live exchange rates from ExchangeRate-API. The application secures API requests via a proxy hosted on Vercel, ensuring safe handling of API keys.
 
 ## Features
 
@@ -34,11 +34,11 @@ To run this project locally, follow these steps:
 
 ## Technologies
 
-- **[TypeScript](https://www.typescriptlang.org/)**: A superset of JavaScript that adds static types.
 - **[React](https://react.dev/)**: A JavaScript library for building user interfaces, particularly well-suited for creating interactive and dynamic web applications.
+- **[TypeScript](https://typescriptlang.org/)**: A superset of JavaScript that adds static types.
 - **[Vite](https://vitejs.dev/)**: A build tool and development server that provides fast hot module replacement.
 
 ## Credits
 
-- **[Exchangerate.host](https://exchangerate.host/)**: A free API providing real-time exchange rates for global currencies.
+- **[ExchangeRate-API](https://exchangerate-api.com/)**: A free API providingexchange rates for global currencies.
 - **[Vercel](https://vercel.com/)**: A cloud platform that enables easy deployment of serverless functions and web applications.
